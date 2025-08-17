@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import userRoutes from './routes/userRoutes.js';
+import chatRoutes from './routes/chatRoutes.js';
 import cors from 'cors';
 import crypto from 'crypto';
 
@@ -19,6 +20,7 @@ const mongoURI = process.env.MONGO_URI;
 app.use(express.json());
 app.use(cors());
 app.use('/api/users', userRoutes);
+app.use('/api/chat', chatRoutes);
 
 
 

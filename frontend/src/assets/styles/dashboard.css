@@ -1,0 +1,9 @@
+.dashboard-container .sidebar {
+    background-color: goldenrod;
+    color: white
+}
+
+
+.sidebar {
+    height: 100vh;
+}

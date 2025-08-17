@@ -1,5 +1,4 @@
 
-import './App.css'
 import Register from './Components/auth/register.jsx'
 import Login from './Components/auth/login.jsx'
 import Create from './Components/employee/Create.jsx'
@@ -8,6 +7,8 @@ import Update from './Components/employee/Update.jsx'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import PrivateRoute from './Components/auth/PrivateRoute.jsx'
 import Dashboard from './Components/auth/dashboard.jsx'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -31,6 +32,8 @@ function App() {
           
         </Routes>
       </BrowserRouter>
+
+      <ToastContainer position="top-right" autoClose={2000} />
       
     </>
   )

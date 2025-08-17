@@ -1,4 +1,5 @@
 // HELPERS FUNCTIONS
+import crypto from 'crypto';
 
 export function successResponse(res,status, message, data, token=null) {
     const response = {
@@ -22,3 +23,8 @@ export function errorResponse(res, status, message) {
     })
 }
 
+
+
+export function generateSecretKey() {
+    return crypto.randomBytes(32).toString('hex');    
+}
